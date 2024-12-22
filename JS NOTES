@@ -1,0 +1,160 @@
+# JAVA SCRIPT NOTES-------------------------------------------------------------
+
+
+#JS introduction----------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<script>
+    alert("Hello world");
+
+console.log("Code is running...")
+console.log("Code is already running...")
+console.log("Code is always running...")
+
+var a= prompt("Enter your number")
+var youSay= confirm("Are you sure you want to destroy your future for a girl")
+
+if(youSay){
+    console.log("Your future is in Dark")
+}
+else{
+    console.log("Your future is bright")
+}
+
+
+
+console.log("Your number is " + a)
+
+document.title = "Nachoooo"
+
+document.style.body.backgroundColor= "red"
+</script>
+<body>
+    <div class="box">Hello world</div>
+    <button>Submit</button>
+
+
+</body>
+</html>
+
+
+
+# JS VARIABLE, DATA TYPE & OBJECTS----------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT VARIABLE</title>
+</head>
+<script>
+    console.log("Hello chutiyoooo...")
+
+    var a = 5;
+    var b = 6;
+    var c = "Harshu";
+
+    console.log(a + b)
+    console.log(typeof a, typeof b, typeof c)
+
+    {
+        var a = 9;
+        console.log(a)
+    }
+    console.log(a)
+
+
+    let x = "fuudu";
+    let y = 5;
+    let z = 3.99;
+    let q = true;
+    let p = undefined;
+    let r = null;
+
+    console.log(x, y, z, p, q, r)
+    console.log(typeof x, typeof y, typeof z, typeof p, typeof q, typeof r)
+
+    let o = {
+        name: "Atif",
+        job_title: "Developer",
+        salary: "1000000sd"
+    }
+    console.log(o)
+    o.salary = "100054000sd"
+    console.log(o)
+</script>
+
+<body>
+
+</body>
+
+</html>
+
+
+# JS Arithmetic-----------------------------------------------------------------
+console.log("Hello world......");
+
+let age= 3;
+let grace=2;
+console.log(age+grace);
+console.log(age-grace);
+console.log(age*grace);
+console.log(age/grace);
+console.log(age**grace);
+console.log(age++);
+
+if(age>18){
+    console.log("You can drive");
+}
+else{
+    console.log("You cannot drive");
+}
+
+# JS conditional statement------------------------------------------------------
+console.log("Hello India");
+
+let a=1;
+for(let i=0; i<100; i++){              //For loop
+    console.log(a+i);
+}
+
+let obj={
+    name:"Harsh",
+    company: "Trading center",
+    Salary: 500000
+}
+
+for (const key in obj) {              //For in loop
+        const element= obj[key]
+        console.log(key,element )
+    }
+
+
+    for(const c of "Harshu"){        //For of loop
+        console.log(c)
+    }
+    o/p==>H
+          a
+          r
+          s
+          h
+          u
+
+
+let i=0;
+    while(i<=5){             //While loop
+        console.log(i)
+        i++;
+    }
+
+ let i=1;
+    do{
+        console.log(i);     // Do while loop
+        i++;
+    }while(i<10)
