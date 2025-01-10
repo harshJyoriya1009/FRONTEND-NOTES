@@ -1,0 +1,18 @@
+React hook--> const [index, setIndex] = useState(0);
+
+# REACT COMPONENT LIFECYCLE-----------------------------------------------------
+
+*This series of events that happen from the mounting of a React component to its Unmounting.
+-Mounting: Birth of your component
+-Update: Growth of your component
+-Unmount: Death of your component
+
+# METHODS IN REACT COMPONENT LIFECYCLE------------------------------------------
+
+1) The render() method is used to render HTML of the component in react. This method is required for a class based component to render the DOM. It runs during the mounting and updating of your component. Render() method should be pure i.e., you cannot modify state inside it.
+2) The componentDidMount() methods runs after the component output has been rendered to the DOM.
+3) The componentDidUpdate() method is invoked as soon as the updating happens. The most common use case for the componentDidUpdate() method is updating the DOM in response to prop or state changes.
+4) The componentWillUnmount() lifecycle method is called just before the component is Unmounted and destroyed. Usually used to perform clean ups
+
+# REACT LIFECYCLE METHODS DIAGRAM-----------------------------------------------
+https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
