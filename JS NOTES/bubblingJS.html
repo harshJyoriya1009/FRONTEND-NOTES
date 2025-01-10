@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubbling in JS</title>
+</head>
+<style>
+    .child {
+        background-color: bisque;
+        padding: 14px;
+        margin: 14px;
+        border: 2px solid black;
+        cursor: pointer;
+    }
+
+    .containerChildren {
+        background-color: aquamarine;
+        padding: 14px;
+        margin: 14px;
+    }
+
+    .container {
+        background-color: blueviolet;
+        padding: 14px;
+        margin: 14px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="containerChildren">
+            <div class="child">
+                This is a box
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelector(".child").addEventListener("click", (e) => {
+            e.stopPropagation();
+            alert("Child is Clicked");
+        })
+
+
+        document.querySelector(".containerChildren").addEventListener("click", (e) => {
+            alert("containerChildren is Clicked")
+        })
+
+
+        document.querySelector(".container").addEventListener("click", (e) => {
+            alert("container is Clicked")
+        })
+        function getRandomColor() {
+            let var1 = Math.ceil(0 + Math.random() * 255);
+            let var2 = Math.ceil(0 + Math.random() * 255);
+            let var3 = Math.ceil(0 + Math.random() * 255);
+
+            return `rgb(${var1}, ${var2}, ${var3})`
+        }
+
+       let a= setInterval(() => {
+            document.querySelector(".containerChildren").style.background = getRandomColor()
+        }, 2);
+        
+        console.log(a)
+
+        // setInterval(() => {
+        //     document.querySelector(".container").style.background = getRandomColor()
+        // }, 2);
+
+        setTimeout((a) => {
+            document.querySelector(".containerChildren").style.background = getRandomColor()
+        }, 2);
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,409 @@
+CSS (Chapter-1):----------------------------------------------------------------
+* CSS stands for Cascading Style Sheets.
+* CSS is used to style to or web page.
+
+     p { color : blue; }    --> we generally used ids and class in html file.
+     where p--> selector
+           color--> Property
+           blue--> value
+
+# CSS SYNTAX:-------------------------------------------------------------------
+
+   header, p.intro {
+                    background-color: red;
+                    border-radius: 3px;
+                   }
+
+# Three ways to add CSS to the markup:------------------------------------------
+1)Inline CSS: CSS is added to the elements directly using style attribute.   EX:- <p style= "____">
+2) Internal CSS: CSS is kept inside the head tags in <style> tags.
+3) External CSS: CSS is kept separately inside a .CSS style sheet.
+
+CSS Selectors:------------------------------------------------------------------
+*) CSS Selectors are used to find the elements whose property will be set.
+*) Selectors are used to target the html element.
+*) Selectors makes it easy for us to easily target single/multiple HTML elements in the markup.
+
+      p{ color: red;}
+      where p--> Selectors
+        color-->Property
+         blue-->Value
+
+# Responsive Design:------------------------------------------------------------
+*) Endless new resolution and devices are difficult to support separately for a web developer.
+*) Responsive design is a way for a web developer to make his website adapt to all devices and resolutions.
+*) Responsive design is a necessary and not a luxury anymore.
+
+=> Various ways to achieve Responsive design------------------------------------
+1) Setting up the viewport.
+2) Use max-width/max-height.
+3) Using CSS Media Queries.
+4) Using em/rem/vh/vw units over pixels.
+
+=> em -> Font size of the power, in the case of typographical properties like font-size, and font-size of the element itself, in the case of other properties like width.
+=> rem -> Font size of the root element.
+
+Flexbox Direction---------------------------------------------------------------
+ It sets how flex items are placed in the flex container, along which axis and direction.
+*) flex-direction : row; (default)
+*) flex-direction : row-reverse;
+*) flex-direction : column;
+*) flex-direction : column-reverse;
+
+ Flex Properties for Flex Container---------------------------------------------
+*) justify-content : alignment along the main axis.
+flex-start / flex-end / centre / space-evenly /
+*) flex-wrap : nowrap / wrap / wrap-reverse
+*) align-items : alignment along the cross axis.
+*) align-content : alignment of space between & around the content along cross-axis
+
+ Flex Properties for Flex Item--------------------------------------------------
+*) align-self : alignment of individual along the cross axis.
+*) flex-grow : how much a flex item will grow relative to the rest of the flex items if space is available
+*) flex-shrink  :  how much a flex item will shrink relative to the rest of the flex items if space is available
+
+# Media Queries-----------------------------------------------------------------
+ Help create a responsive website in today's world everyone has a different device with thousand of different screen sizes if you built a website people will use it on laptop, big screen
+ computers, an iphone, a big screen android phone or a small screen one, an ipad even orientation is different like landscape or portrait
+ so it's important that layout looks good on all so we need design to be responsive, respond to different screen sizes & orientation
+
+--> @media (width : 600px) {
+       div {
+              background-color : red;
+      }
+   }
+
+--> @media (min-width : 600px) {
+       div {
+              background-color : red;
+      }
+  }
+
+--> @media (min-width : 200px) and (min-width : 300px) {
+    div {
+    background-color : red;
+    }
+  }
+
+  #CSS SELECTORS*********************************************************************************************************************
+_____________________________________________________________________________________________________
+|        <!DOCTYPE html>                                                                             |
+|   <html lang="en">                                                                                 |
+|   <head>                                                                                           |
+|     <meta charset="UTF-8">                                                                         |
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0">                         |
+|     <title>Document</title>                                                                        |
+|   </head>                                                                                          |
+|  <style>                                                                                           |
+|  --if p is contained by any li which is connected to div then this CSS will applied.               |
+|   div li p{                                                                                        |
+|   color : yellow;                                                                                  |
+|   background-color: green;                                                                         |
+|   font-weight : bold;                                                                              |
+|   }                                                                                                |
+|                                                                                                    |
+|   --if p is right inside div then this CSS will be applied.                                        |
+|   div > p {                                                                                        |
+|   color : yellow;                                                                                  |
+|   background-color : pink;                                                                         |
+|   font-weight : bold;                                                                              |
+|   }                                                                                                |
+|                                                                                                    |
+|   --if p is right after div i.e. p is the next sibling of div.                                     |
+|   div + p {                                                                                        |
+|   color : yellow;                                                                                  |
+|   background-color : pink;                                                                         |
+|   font-weight : bold;                                                                              |
+|   }                                                                                                |
+|                                                                                                    |
+|  </style>                                                                                          |
+|  <body>                                                                                            |
+|                                                                                                    |
+|  <div class="container">                                                                           |
+|  <div class="row">                                                                                 |
+|  <ul>                                                                                              |
+|  <li class="item"><p>this is another paragraph<p><li>                                              |
+|                                                                                                    |
+|  </body>                                                                                           |
+|  </html>                                                                                           |
+|                                                                                                    |
+|____________________________________________________________________________________________________|
+
+
+
+
+# Atrribute & nth psudeo____________________________________________________________________________
+|  <!DOCTYPE html>                                                                                  |
+|  <head>                                                                                           |
+|      <meta charset="UTF-8">                                                                       |
+|      <meta name="viewport" content="width=device-width, initial-scale=1.0">                       |
+|      <title>Attribute & n-th psudeo</title>                                                       |
+|  </head>                                                                                          |
+|  <style>                                                                                          |
+|          display: block;                                                                          |
+|          margin: auto;                                                                            |
+|      .container{                                                                                  |
+|          width: 223px;                                                                            |
+|      }                                                                                            |
+|                                                                                                   |
+|      input{                                                                                       |
+|          display: block;                                                                          |
+|      }                                                                                            |
+|      input[type="text"]{                                                                          |
+|          border: 2px solid beige;                                                                 |
+|                                                                                                   |
+|          padding:20px 15px;                                                                       |
+|      }                                                                                            |
+|      a[target="_blank"]{                                                                          |
+|          font-size: 45px;                                                                         |
+|          color : black;                                                                           |
+|      }                                                                                            |
+|                                                                                                   |
+|      li:nth-child(odd){                                                                           |
+|          color : brown;                                                                           |
+|      }                                                                                            |
+|                                                                                                   |
+|  </style>                                                                                         |
+|  <body>                                                                                           |
+|      <div class="container">                                                                      |
+|          <h1><a href="http://google.com" target="_blank">Go to Google</a></h1>                    |
+|          <h1><a href="http://instagram.com" target="_self">Go to Instagram</a></h1>               |
+|          <form action="">                                                                         |
+|              <input type="text" placeholder="Enter your name">                                    |
+|              <input type="password" placeholder="Enter your password">                            |
+|              <input type="email" placeholder="Enter your e-mail">                                 |
+|          </form>                                                                                  |
+|          <ul>                                                                                     |
+|          <li class="item" id="item-1">item1</li>                                                  |
+|          <li class="item" id="item-2">item2</li>                                                  |
+|          <li class="item" id="item-3">item3</li>                                                  |
+|          <li class="item" id="item-4">item4</li>                                                  |
+|          <li class="item" id="item-5">item5</li>                                                  |
+|          <li class="item" id="item-6">item6</li>                                                  |
+|          <li class="item" id="item-7">item7</li>                                                  |
+|          <li class="item" id="item-8">item8</li>                                                  |
+|          <li class="item" id="item-9">item9</li>                                                  |
+|          <li class="item" id="item-10">item10</li>                                                |
+|      </ul>                                                                                        |
+|      </div>                                                                                       |
+|                                                                                                   |
+|  </body>                                                                                          |
+|  </html>                                                                                          |
+|                                                                                                   |
+|___________________________________________________________________________________________________|
+
+*#Box shadow and text shadow***********************************************************************************************************
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box shadow and text-shadow</title>
+</head>
+<style>
+    .container{
+        display: flex;
+    }
+    .card{
+        border:2px solid red;
+        background-color: bisque;
+        margin: 6px;
+        padding: 7px;
+        /* box-shadow:  2px 2px 4px green; */            // 2px-->x axis, 2px-->y axis 4px-->blur
+        box-shadow:  2px 2px green, 5px 6px  red,;       // This condition used when you have to generate two shadows
+    }
+    .card h2{
+        text-align: center;
+        /* text-shadow: 2px 2px 4px green; */
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class="card" id="card-1">
+           <h2> Card 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa repellat cum distinctio adipisci provident,
+             ratione exercitationem vitae cupiditate maiores voluptatum nemo sapiente sint officiis at, suscipit harum perferendis debitis.
+             Nulla sint ipsam odit labore.</p>
+        </div>
+        <div class="card" id="card-2">
+            <h2>Card 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa repellat cum distinctio adipisci provident,
+             ratione exercitationem vitae cupiditate maiores voluptatum nemo sapiente sint officiis at, suscipit harum perferendis debitis.
+             Nulla sint ipsam odit labore.</p>
+        </div>
+        <div class="card" id="card-3">
+            <h2>Card 3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa repellat cum distinctio adipisci provident,
+             ratione exercitationem vitae cupiditate maiores voluptatum nemo sapiente sint officiis at, suscipit harum perferendis debitis.
+             Nulla sint ipsam odit labore.</p>
+        </div>
+    </div>
+
+</body>
+</html>
+*******************************************************************************************************************************************
+
+
+*Animations and Keyframes******************************************************************************************************************
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations and Keyframe</title>
+</head>
+<style>
+    .container {
+        background-color: skyblue;
+        /* top: 0%;
+        left: 0%; */
+    }
+
+    .box {
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center; */
+        background-color: blue;
+        width: 50px;
+        height: 200px;
+        position: relative;
+        /* animation-name: harsh01; */
+        /* animation-name:harsh02; */
+        /* animation-name: harsh03;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards; */
+        /* animation-timing-function:ease-in-out; */
+        /* animation-delay: 2s; */
+        /* animation-direction:reverse; */
+
+        /* These properties can be set using this shorthand */
+        /* animation: animation-name animation-duration animation-iteration-count animation-timing-function animation-delay animation-fill-mode  */
+        animation: harsh02 10s infinite ease-in 2s forwards
+    }
+
+    @keyframes harsh03 {
+        0% {
+            top: 0px;
+            left: 0px;
+        }
+
+        20% {
+            top: 250px;
+            left: 0px;
+        }
+
+        40% {
+            top: 250px;
+            left: 250px;
+        }
+
+        60% {
+            top: 0px;
+            left: 250px;
+        }
+
+        80% {
+            top: 0px;
+            left: 0px;
+        }
+
+        100% {}
+    }
+
+    @keyframes harsh02 {
+        0% {
+            width: 2%;
+            background-color: rgb(205, 205, 244);
+        }
+
+        25% {
+            width: 30%;
+            /* background-color: green; */
+            background-color: rgb(122, 122, 247);
+        }
+
+        50% {
+            width: 60%;
+            /* background-color: red; */
+            background-color: rgb(77, 77, 248);
+        }
+
+        100% {
+            width: 100%;
+            background-color: pink;
+            background-color: rgb(0, 0, 255);
+        }
+    }
+
+    @keyframes harsh01 {
+        from {
+            width: 50px;
+        }
+        to {
+            width: 100%;
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="box">
+
+        </div>
+    </div>
+</body>
+
+</html>
+********************************************************************************************************************************************
+
+
+
+*#CSS transition****************************************************************************************************************************
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS transition</title>
+</head>
+<style>
+    body{
+        background-color:black;
+    }
+
+    #box{
+        height:250px;
+        width:250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+        transition-property: all;
+        transition-duration: 1s;
+        transition-timing-function: ease-in;
+        transition-delay: .3s;
+        transition: all 5s ease-in .3s;
+    }
+
+    #box:hover{
+        background-color: green;
+        height:700px;
+        width:700px;
+        border-radius:100px;
+        font-size:50px;
+
+        }
+
+</style>
+<body>
+    <div class="container">
+        <div id="box">
+            <H3>This is any my box</H3>
+        </div>
+    </div>
+
+</body>
+</html>
+*************************************************************************************************************************************************

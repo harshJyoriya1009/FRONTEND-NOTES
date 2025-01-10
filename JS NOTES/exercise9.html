@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faulty calculator</title>
+</head>
+<script>
+    // /* Create a faulty calculator using JS
+
+    // This faulty calc does following:
+    // 1) It takes input from the user.
+    // 2) It perform wrong operation as follows.
+
+    // + ----> -
+    // * ----> +
+    // - ----> /
+    // / ----> **
+    //  It perform wromg operation 10% of the times
+
+    // */
+
+    let random= Math.random()
+    let a=prompt("Enter your first Number")
+    let b=prompt("Enter your Second Number")
+    let c=prompt("Enter your operator")
+    
+
+
+    let obj={
+        "+": "-",
+        "*": "+",
+        "-": "/",
+        "/": "**"
+    }
+    if(random>0.1){
+        // Perform correct calculation
+        alert(`The result is ${eval(`${a} ${c} ${b}`)}`)
+        
+    }
+    else{
+        // Perform wrong claculation
+        c=obj[c]
+        alert(`The result is ${eval(`${a} ${c} ${b}`)}`)
+       
+    }
+</script>
+<body>
+    
+</body>
+</html>

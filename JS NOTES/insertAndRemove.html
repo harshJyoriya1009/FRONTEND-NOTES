@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserting and Removing Element using JS</title>
+</head>
+
+<body>
+    <div class="container rd msg">
+        <div class="box" style="display: flex;">This is a box</div>
+    </div>
+    <script>
+        let div = document.createElement("div");
+        div.innerHTML = "I have inserted by <b>Harshu</b>"
+        div.setAttribute("class", "created");
+        div.setAttribute("style", "color:red")
+        // document.querySelector(".container").append(div);
+        // document.querySelector(".container").prepend(div);
+        // document.querySelector(".container").before(div);
+        // document.querySelector(".container").after(div);
+        // document.querySelector(".container").replaceWith(div);
+
+        let cont = document.querySelector(".container");
+        // cont.insertAdjacentHTML("afterbegin","<b>Hello how are you </b>")
+        // cont.insertAdjacentHTML("afterend","<b>Hello how are you </b>")
+        // cont.insertAdjacentHTML("beforebegin","<b>Hello how are you </b>")
+        // cont.insertAdjacentHTML("beforeend","<b>Hello how are you </b>")
+
+        document.querySelector(".container").className
+        document.querySelector(".container").classList.add("harry")
+        document.querySelector(".container").classList.remove("rd")
+        document.querySelector(".container").className
+    </script>
+
+</body>
+
+</html>

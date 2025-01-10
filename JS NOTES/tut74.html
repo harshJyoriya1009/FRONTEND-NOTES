@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Browser Events -->
+    <!-- https://developer.mozilla.org/en-US/docs/Web/Events     -->
+    <div class="container">
+        <div class="box">This is a box</div>
+    </div>
+    <button id="btn">Click here</button>
+    <script>
+
+        let button=document.getElementById("btn");
+      
+       button.addEventListener("click", ()=>{
+            alert("Hey I am click Yayyy!!")
+           document.querySelector(".box").innerHTML="<b> Always enjoy your Day </b> Enjoy your Click"
+           
+        })
+
+        button.addEventListener("contextmenu", ()=>{
+            alert("Pls Don't Right click here chutiye!!!") 
+        })
+
+        document.addEventListener("keydown", (e)=>{
+            console.log(e); 
+        })
+        
+    </script>
+</body>
+</html>

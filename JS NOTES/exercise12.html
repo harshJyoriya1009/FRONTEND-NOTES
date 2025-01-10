@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color the Boxes</title>
+</head>
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 23px;
+
+    }
+
+    .box {
+        height: 45px;
+        width: 45px;
+        border: 2px solid black;
+
+    }
+</style>
+<!-- <script>
+    console.log("Random color exercise");
+    let boxes = document.querySelector(".container").children;
+
+    function getRandomColor() {
+        let var1 = Math.ceil(0 + Math.random() * 255)
+        let var2 = Math.ceil(0 + Math.random() * 255)
+        let var3 = Math.ceil(0 + Math.random() * 255)
+        return `rgb(${var1}, ${var2}, ${var3})`
+
+    }
+
+    Array.from(boxes).forEach(e => {
+        e.style.backgroundColor = getRandomColor();
+        e.style.Color = getRandomColor();
+    })
+</script> -->
+
+<body>
+    <!-- Given 5 boxes, Assign a random color and a random background to each boxes using DOM concept-->
+    <div class="container">
+        <div class="box">BOX</div>
+        <div class="box">BOX</div>
+        <div class="box">BOX</div>
+        <div class="box">BOX</div>
+        <div class="box">BOX</div>
+    </div>
+    <script>
+        console.log("Random color exercise");
+        let boxes = document.querySelector(".container").children;
+    
+        function getRandomColor() {
+            let var1 = Math.ceil(0 + Math.random() * 255)
+            let var2 = Math.ceil(0 + Math.random() * 255)
+            let var3 = Math.ceil(0 + Math.random() * 255)
+            return `rgb(${var1}, ${var2}, ${var3})`
+    
+        }
+    
+        Array.from(boxes).forEach(e => {
+            e.style.backgroundColor = getRandomColor();
+            e.style.Color = getRandomColor();
+        })
+    </script> 
+</body>
+
+</html>
