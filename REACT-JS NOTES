@@ -1,5 +1,16 @@
 React hook--> const [index, setIndex] = useState(0);
 
+# What are React Hooks?
+1) Features of class based components in function based components.
+2) It allows you to use state and other React features without writing a class.
+3) Hooks are the function which "hooks into" React state and lifecycle features from function components.
+
+# Commonly used React hooks
+1) useState
+2) useEffect
+3) useContext
+4) useRef
+
 # REACT COMPONENT LIFECYCLE-----------------------------------------------------
 
 *This series of events that happen from the mounting of a React component to its Unmounting.
