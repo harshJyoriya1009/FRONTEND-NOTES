@@ -27,3 +27,21 @@ React hook--> const [index, setIndex] = useState(0);
 
 # REACT LIFECYCLE METHODS DIAGRAM-----------------------------------------------
 https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+
+
+## REDUX------------------------------------------------------------------------
+ Q) Why Redux?
+ - When a JavaScript application grows big, it becomes difficult for the user to manage its state.
+ - Redux solves this problems by managing application's sate with a single global object called Store.
+ - Makes Testing very easy.
+ - Consistency throughout the application.
+
+ *ACTIONS & REDUCERS------------------------------------------------------------
+ - An action is a plain object that describes the intention to cause change.
+ - A reducer is a function that determines changes to an application's state. return the new state and tell the store how to do.
+ - It uses the action it receives to determine this change.
+
+       ACTION---->REDUCER---->STORE
+          ^                     |
+          |                     |
+          |--------VIEW<--------|
